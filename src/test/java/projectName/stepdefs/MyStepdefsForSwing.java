@@ -45,24 +45,16 @@ public class MyStepdefsForSwing {
     @Then("the swing form still displays")
     public void theSwingFormStillDisplays() {
         AssertJUnit.assertTrue(form.getF().isDisplayable());
-
     }
-
 
     @When("I input my name: {string}")
     public void iInputMyName(String arg0) {
-//        form.getF().setName(arg0);
-        int b = 2 + 2;
+        form.getF().getTname().setText(arg0);
     }
 
     @Then("my name displays: {string}")
     public void myNameDisplays(String arg0) {
-//        AssertJUnit.assertEquals(arg0, Arrays.stream();
-        AtomicInteger count = new AtomicInteger();
-        Arrays.stream(Frame.getFrames()).toList().forEach(s-> {
-            out.println(count.toString() + " " + s);
-            count.getAndIncrement();
-        });
+        AssertJUnit.assertEquals(arg0, form.getF().getTname().getText());
     }
 
     @After
