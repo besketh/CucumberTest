@@ -12,9 +12,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
-
-
 public class FormSwingGUI
         extends JFrame
         implements ActionListener {
@@ -25,6 +22,203 @@ public class FormSwingGUI
     private JLabel name;
     private JTextField tname;
     private JLabel mno;
+
+    public Container getC() {
+        return c;
+    }
+
+    public void setC(Container c) {
+        this.c = c;
+    }
+
+
+
+    public void setTitle(JLabel title) {
+        this.title = title;
+    }
+
+
+
+    public void setName(JLabel name) {
+        this.name = name;
+    }
+
+    public JTextField getTname() {
+        return tname;
+    }
+
+    public void setTname(JTextField tname) {
+        this.tname = tname;
+    }
+
+    public JLabel getMno() {
+        return mno;
+    }
+
+    public void setMno(JLabel mno) {
+        this.mno = mno;
+    }
+
+    public JTextField getTmno() {
+        return tmno;
+    }
+
+    public void setTmno(JTextField tmno) {
+        this.tmno = tmno;
+    }
+
+    public JLabel getGender() {
+        return gender;
+    }
+
+    public void setGender(JLabel gender) {
+        this.gender = gender;
+    }
+
+    public JRadioButton getMale() {
+        return male;
+    }
+
+    public void setMale(JRadioButton male) {
+        this.male = male;
+    }
+
+    public JRadioButton getFemale() {
+        return female;
+    }
+
+    public void setFemale(JRadioButton female) {
+        this.female = female;
+    }
+
+    public ButtonGroup getGengp() {
+        return gengp;
+    }
+
+    public void setGengp(ButtonGroup gengp) {
+        this.gengp = gengp;
+    }
+
+    public JLabel getDob() {
+        return dob;
+    }
+
+    public void setDob(JLabel dob) {
+        this.dob = dob;
+    }
+
+    public JComboBox getDate() {
+        return date;
+    }
+
+    public void setDate(JComboBox date) {
+        this.date = date;
+    }
+
+    public JComboBox getMonth() {
+        return month;
+    }
+
+    public void setMonth(JComboBox month) {
+        this.month = month;
+    }
+
+    public JComboBox getYear() {
+        return year;
+    }
+
+    public void setYear(JComboBox year) {
+        this.year = year;
+    }
+
+    public JLabel getAdd() {
+        return add;
+    }
+
+    public void setAdd(JLabel add) {
+        this.add = add;
+    }
+
+    public JTextArea getTadd() {
+        return tadd;
+    }
+
+    public void setTadd(JTextArea tadd) {
+        this.tadd = tadd;
+    }
+
+    public JCheckBox getTerm() {
+        return term;
+    }
+
+    public void setTerm(JCheckBox term) {
+        this.term = term;
+    }
+
+    public JButton getSub() {
+        return sub;
+    }
+
+    public void setSub(JButton sub) {
+        this.sub = sub;
+    }
+
+    public JButton getReset() {
+        return reset;
+    }
+
+    public void setReset(JButton reset) {
+        this.reset = reset;
+    }
+
+    public JTextArea getTout() {
+        return tout;
+    }
+
+    public void setTout(JTextArea tout) {
+        this.tout = tout;
+    }
+
+    public JLabel getRes() {
+        return res;
+    }
+
+    public void setRes(JLabel res) {
+        this.res = res;
+    }
+
+    public JTextArea getResadd() {
+        return resadd;
+    }
+
+    public void setResadd(JTextArea resadd) {
+        this.resadd = resadd;
+    }
+
+    public String[] getDates() {
+        return dates;
+    }
+
+    public void setDates(String[] dates) {
+        this.dates = dates;
+    }
+
+    public String[] getMonths() {
+        return months;
+    }
+
+    public void setMonths(String[] months) {
+        this.months = months;
+    }
+
+    public String[] getYears() {
+        return years;
+    }
+
+    public void setYears(String[] years) {
+        this.years = years;
+    }
+
     private JTextField tmno;
     private JLabel gender;
     private JRadioButton male;
