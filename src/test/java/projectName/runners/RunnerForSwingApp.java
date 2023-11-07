@@ -1,7 +1,5 @@
 package projectName.runners;
 
-//package cucumberTest;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.Before;
