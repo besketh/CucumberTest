@@ -6,10 +6,19 @@ import cucumber.api.java.en.When;
 import org.testng.AssertJUnit;
 import projectName.*;
 
+import java.awt.*;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
+import static java.lang.System.out;
+
 public class MyStepdefs {
     private BicycleRide testBicycleRide;
     private User testUser;
     private Bicycle testBicycle;
+    private final OpenForm form = new OpenForm();
+
+    public MyStepdefs() throws Exception {
+    }
 
 
     @And("^user finds bicycle$")
@@ -48,5 +57,8 @@ public class MyStepdefs {
     @Then("user does not fall off the bike")
     public void userDoesNotFallOffTheBike() {
         AssertJUnit.assertTrue(testUser.isUpright());
+
     }
+
+
 }
