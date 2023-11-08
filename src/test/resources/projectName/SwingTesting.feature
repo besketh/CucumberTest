@@ -8,3 +8,12 @@ Feature: Swing testing
     And 2000 milliseconds pass
     Then my name displays: "Jerry"
 
+
+  Scenario: Multiple inputs
+    Given I open the Swing form
+    And 2000 milliseconds pass
+    When I input the following form details
+      | Name  | Address  |
+      | Jerry | New York |
+    And 2000 milliseconds pass
+    Then my name displays: "Jerry"
