@@ -17,3 +17,9 @@ Feature: Swing testing
       | Jerry | New York |
     And 2000 milliseconds pass
     Then my name displays: "Jerry"
+
+    Scenario: t+c's validation check
+      Given I open the Swing form
+      And 2000 milliseconds pass
+      When I click submit
+      Then The message "Please accept the terms & conditions" is displayed

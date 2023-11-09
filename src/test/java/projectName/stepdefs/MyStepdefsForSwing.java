@@ -9,6 +9,8 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.testng.AssertJUnit;
 import projectName.OpenForm;
+import projectName.locators.ButtonLocators;
+import projectName.locators.LabelLocators;
 import projectName.locators.TextAreaLocators;
 import projectName.locators.TextFieldLocators;
 
@@ -24,6 +26,9 @@ public class MyStepdefsForSwing {
     private TextFieldLocators textFieldLocators;
     private TextAreaLocators textAreaLocators;
 
+    private ButtonLocators buttonLocators;
+
+    private LabelLocators labelLocators;
 
     @Before
     public void setUp() {
@@ -31,6 +36,8 @@ public class MyStepdefsForSwing {
             form = new OpenForm();
             textFieldLocators = new TextFieldLocators(form);
             textAreaLocators = new TextAreaLocators(form);
+            buttonLocators = new ButtonLocators(form);
+            labelLocators = new LabelLocators(form);
             out.println("new form created");
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -82,7 +89,20 @@ public class MyStepdefsForSwing {
         textFieldLocators.getMap().get(TextFieldLocators.LocatorName.NAME).setText(keyValueMap.get("Name"));
         textAreaLocators.getMap().get(TextAreaLocators.LocatorName.ADDRESS).setText(keyValueMap.get("Address"));
 
+
     }
 
+    @When("I click submit")
+    public void iClickSubmit() {
+        buttonLocators.getMap().get(ButtonLocators.LocatorName.SUBMIT).doClick();
+    }
+
+
+
+    @Then("The message {string} is displayed")
+    public void theMessageIsDisplayed(String arg0) {
+        String text = labelLocators.getMap().get(LabelLocators.LocatorName.RES).getText();
+        AssertJUnit.assertEquals(arg0,text);
+    }
 
 }
