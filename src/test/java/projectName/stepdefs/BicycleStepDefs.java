@@ -6,18 +6,13 @@ import cucumber.api.java.en.When;
 import org.testng.AssertJUnit;
 import projectName.*;
 
-import java.awt.*;
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
-import static java.lang.System.out;
-
-public class MyStepdefs {
+public class BicycleStepDefs {
     private BicycleRide testBicycleRide;
     private User testUser;
     private Bicycle testBicycle;
-    private final OpenForm form = new OpenForm();
+    private final Form1 form = new Form1();
 
-    public MyStepdefs() throws Exception {
+    public BicycleStepDefs() throws Exception {
     }
 
 

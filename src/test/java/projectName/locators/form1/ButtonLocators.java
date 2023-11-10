@@ -1,6 +1,6 @@
-package projectName.locators;
+package projectName.locators.form1;
 
-import projectName.OpenForm;
+import projectName.Form1;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -11,11 +11,11 @@ public class ButtonLocators {
         SUBMIT
     }
 
-    private OpenForm form;
+    private Form1 form;
 
     private HashMap<LocatorName, JButton> map = new HashMap<>();
 
-    public ButtonLocators(OpenForm form) {
+    public ButtonLocators(Form1 form) {
         this.form = form;
         if (form.getF().isDisplayable()) {
             map.put(LocatorName.SUBMIT, this.form.getF().getSub());

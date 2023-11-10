@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class FormSwingGUI
+public class SwingGUI
         extends JFrame
         implements ActionListener {
 
@@ -260,7 +260,7 @@ public class FormSwingGUI
 
     // constructor, to initialize the components
     // with default values.
-    public FormSwingGUI()
+    public SwingGUI()
     {
         setTitle("Registration Form");
         setBounds(300, 90, 900, 600);
