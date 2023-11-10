@@ -14,7 +14,7 @@ public class TextAreaLocators {
 
     private Form1 form;
 
-    public HashMap<LocatorName,JTextArea> map = new HashMap<>();
+    private HashMap<LocatorName,JTextArea> map = new HashMap<>();
 
     public TextAreaLocators(Form1 form) {
         this.form = form;
